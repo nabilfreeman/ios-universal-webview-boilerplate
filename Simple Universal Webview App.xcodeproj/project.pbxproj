@@ -411,6 +411,7 @@
 				3F9697041B3455A200CDD77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F9697051B3455A200CDD77A /* Build configuration list for PBXNativeTarget "Simple Universal Webview AppTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +420,7 @@
 				3F9697071B3455A200CDD77A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
