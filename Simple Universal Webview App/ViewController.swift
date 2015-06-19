@@ -17,7 +17,11 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         
-        let url = NSURL (string: "http://localhost");
+        //Here you have a choice between loading a local file (recommended for performance) and loading straight from your website. If you go for the latter, it's important that you have caching set up correctly or your users might struggle to see your web app sometimes.
+        
+        //let url = NSURL (string: "http://localhost");
+        let url = NSBundle.mainBundle().URLForResource("web_content/index", withExtension: "html")
+        
         let requestObj = NSURLRequest(URL: url!);
         webView.loadRequest(requestObj);
     }
