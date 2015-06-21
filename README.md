@@ -3,8 +3,16 @@
 This is an Xcode 6 Universal project that allows you to wrap your website or web app in a super simple iOS app.
 
 # Setup
+- Clone this repo, or hit "Download ZIP" in the Github sidebar.
 
-Set the URL in `ViewController.swift`, and press run. That's all you need to do!
+### Local mode (recommended)
+- Replace the stuff in `web_content` with your own mobile website.
+- Hit Run!
+
+### Internet mode
+- In `ViewController.swift`, switch around the commented out URL lines.
+- Set your URL...
+- Hit Run!
 
 # Why?
 
@@ -17,5 +25,3 @@ If you are a web developer who wants to release an iOS app, this should help you
 # Ideal use
 
 Single page web app with on-screen/no navigation. For example, a game, interactive page, web based slideshow, etc.
-
-Currently it links to a web server - I plan to add loading of a local static site to this.
