@@ -15,23 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kc4-JR-qAs">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kc4-JR-qAs" secondAttribute="bottom" id="5fb-ze-WKE"/>
-                            <constraint firstAttribute="trailing" secondItem="Kc4-JR-qAs" secondAttribute="trailing" id="PIq-e5-TfF"/>
-                            <constraint firstItem="Kc4-JR-qAs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="efV-5a-LGX"/>
-                            <constraint firstItem="Kc4-JR-qAs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="uKl-jG-gGn"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="webView" destination="Kc4-JR-qAs" id="wNd-ea-kNw"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

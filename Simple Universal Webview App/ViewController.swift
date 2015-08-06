@@ -7,23 +7,41 @@
 //
 
 import UIKit
+import WebKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var webView: UIWebView!
+    
+    var wkWebView: WKWebView?
+    var uiWebView: UIWebView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        // Get main screen rect size
+        let screenSize: CGRect = UIScreen.mainScreen().bounds
         
+        // Construct frame where webview will be pop
+        let frameRect: CGRect = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
+
+        // Create url request from local index.html file located in web_content
+        let url: NSURL = NSBundle.mainBundle().URLForResource("web_content/index", withExtension: "html")!
+        let requestObj: NSURLRequest = NSURLRequest(URL: url);
         
-        //Here you have a choice between loading a local file (recommended for performance) and loading straight from your website. If you go for the latter, it's important that you have caching set up correctly or your users might struggle to see your web app sometimes.
-        
-        //let url = NSURL (string: "http://localhost");
-        let url = NSBundle.mainBundle().URLForResource("web_content/index", withExtension: "html")
-        
-        let requestObj = NSURLRequest(URL: url!);
-        webView.loadRequest(requestObj);
+        // Test operating system
+        if NSProcessInfo().isOperatingSystemAtLeastVersion(NSOperatingSystemVersion(majorVersion: 8, minorVersion: 0, patchVersion: 0)) {
+            
+            self.wkWebView = WKWebView(frame: frameRect)
+            self.wkWebView?.loadRequest(requestObj)
+            self.view.addSubview(self.wkWebView!)
+
+        } else {
+
+            self.uiWebView = UIWebView(frame: frameRect)
+            self.uiWebView?.loadRequest(requestObj)
+            self.view.addSubview(self.uiWebView!)
+        }
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,7 +54,6 @@ class ViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
-
 
 }
 

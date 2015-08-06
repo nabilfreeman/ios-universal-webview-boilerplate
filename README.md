@@ -6,7 +6,7 @@ This is an Xcode 6 Universal project that allows you to wrap your website or web
 - Clone this repo, or hit "Download ZIP" in the Github sidebar.
 
 ### Local mode (recommended)
-- Replace the stuff in `web_content` with your own mobile website.
+- Replace the stuff in `www` with your own mobile website.
 - Hit Run!
 
 ### Internet mode
